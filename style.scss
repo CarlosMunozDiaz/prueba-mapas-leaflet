@@ -1,0 +1,34 @@
+@import "reset";
+
+body {font-family: 'Roboto', sans-serif;}
+
+.block {display: block;}
+.text-uppercase {text-transform: uppercase}
+.text-right {text-align: right}
+
+.wrapper {position: relative;}
+
+.row {
+    display: flex;
+    &--between {justify-content: space-between;}
+}
+
+.map {
+    width: 100%;
+    height: 575px;
+
+    margin-top: 20px;
+
+    .leaflet-overlay-pane svg path{
+        pointer-events: auto;
+    }
+    .active {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #map {
+        height: 525px;
+    }
+}
